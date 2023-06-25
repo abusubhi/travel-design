@@ -1,0 +1,163 @@
+@import 'reset';
+
+main{
+display:flex;
+flex-wrap:wrap;
+flex-direction:row;
+grid-area:area3;
+padding:1rem;
+}
+
+#outer div{
+background-color:Azure;
+padding:1em;
+margin:1em;
+}
+
+$basic-color:Azure;
+$second-color:#666;
+$third-color:#222;
+
+*{
+	box-sizing:border-box;
+}
+
+header{
+	background-color:$basic-color;
+}
+
+a{
+	color:$third-color;
+	text-decoration:none;
+}
+
+footer{
+	color:$third-color;
+
+	i{
+		padding-right:0.5em;
+	}
+
+	#footer-content{
+		background-color:$second-color;
+		display:flex;
+		flex-wrap:wrap;
+		padding:0.5em;
+	}
+	#copyright{
+		background-color:$second-color;
+		padding:1em;
+		text-align:center;
+		font-weight:bold;
+	}
+	.footer-block{
+		padding:1em;
+		div,p,h1,li,i{
+			padding:0.3em;
+		}
+	}
+}
+
+h1{
+	font-size:1.5em;
+	font-weight:bold;
+}
+
+header, footer, main, section{
+	/*border:2px red solid;*/
+}
+#items{
+	display:flex;
+	flex-wrap:wrap;
+	text-align:center;
+}
+.item{
+	border: 2px gray solid;
+	border-radius:5px;
+	margin:1rem;
+	padding:0.5rem;
+}
+
+ul{
+	list-style-type:none;
+	padding:0;
+	margin:0;
+}
+.navbar{
+	background-color:$second-color;
+	display:none;
+}
+.navbar a{
+	color:white;
+	text-decoration:none;
+}
+.navbar li:hover{
+	background-color:#000;
+}
+#bars i{
+	background-color:$second-color;
+	color:white;
+	padding:0.3em;
+}
+.navbar li{
+	padding:1em;
+}
+.navbar i{
+	padding-right: 0.5em;
+}
+header #top img{
+	width:8em;
+}
+header #top div{
+	margin:0.5em;
+	text-align:center;
+}
+
+@media (min-width:600px){
+
+	footer{
+		.footer-block{
+			width:20%;
+		}
+	}
+
+	header #top{
+		display:flex;
+		justify-content:space-between;
+		align-main: center;
+	}
+	#outer{
+display:grid;
+grid-template-colums: 3em aute 3em;
+grid-template-areas:
+"header header header"
+"sidebar sidebar sidebar"
+"main main login"
+"footer footer footer"
+}
+#item1{
+background-color:red;
+grid-area:header;
+}
+#item2{
+grid-area: sidebar;
+}
+#item3{
+grid-area:main;
+}
+
+#item4{
+grid-sidebar-login:login;
+}
+#item5{
+grid-area:footer;
+}
+	.navbar{
+		display:block;
+		position:sticky;
+		top:0px;
+	}
+
+}
+
+
